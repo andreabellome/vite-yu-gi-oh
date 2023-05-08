@@ -18,9 +18,9 @@ export default {
 </script>
 
 <template>
-    <div class="debug main-div-style">
+    <div class="main-div-style">
 
-        <div class="debug inner-div-style">
+        <div class="inner-div-style">
 
             <div class="bg-dark col-white padd-5">
                 Found {{ store.arrayCards.length }} cards
