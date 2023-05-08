@@ -1,9 +1,26 @@
-<script setup>
+<script>
+import HeaderComponent from './components/HeaderComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
+import MainComponent from './components/MainComponent.vue'
+
+export default {
+  name: "App",
+  components: {
+    HeaderComponent,
+    MainComponent,
+    FooterComponent
+  }
+}
 </script>
 
 <template>
-  <div class="debug">
-    <h1>hello world</h1>
+  cciao
+  <div>
+    <HeaderComponent />
+
+    <MainComponent />
+
+    <FooterComponent />
   </div>
 </template>
 
