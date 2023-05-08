@@ -1,6 +1,12 @@
 <script setup>
 </script>
 
-<template></template>
+<template>
+  <div class="debug">
+    <h1>hello world</h1>
+  </div>
+</template>
 
-<style scoped></style>
+<style lang="scss">
+@use "./style/main.scss" as *;
+</style>
