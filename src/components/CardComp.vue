@@ -1,24 +1,24 @@
 <script>
-/* import { store } from '../store' */
+import { store } from '../store'
 
 import SingleCard from './SingleCard.vue'
 
 export default {
-    name: 'CardsComp',
+    name: 'CardComp',
     components: {
         SingleCard
     },
-    /* data() {
+    data() {
         return {
             store
         }
-    } */
+    }
 }
 </script>
 
 <template>
-    <div class="text-center row">
-        hello world
+    <div>
+        <SingleCard />
     </div>
 </template>
 

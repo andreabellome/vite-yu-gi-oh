@@ -1,27 +1,21 @@
 <script>
-import HeaderComponent from './components/HeaderComponent.vue'
-import FooterComponent from './components/FooterComponent.vue'
-import MainComponent from './components/MainComponent.vue'
+
+import axios from 'axios';
+import { store } from './store'
+
+import CardComp from './components/CardComp.vue'
+
 
 export default {
   name: "App",
   components: {
-    HeaderComponent,
-    MainComponent,
-    FooterComponent
+    CardComp
   }
 }
 </script>
 
 <template>
-  cciao
-  <div>
-    <HeaderComponent />
-
-    <MainComponent />
-
-    <FooterComponent />
-  </div>
+  <CardComp />
 </template>
 
 <style lang="scss">
