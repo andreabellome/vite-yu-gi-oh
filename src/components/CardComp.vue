@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios'
 import { store } from '../store'
 
 import SingleCard from './SingleCard.vue'
@@ -22,19 +23,15 @@ export default {
         <div class="debug inner-div-style">
 
             <div class="bg-dark col-white padd-5">
-                Found 30 cards
+                Found {{ store.arrayCards.length }} cards
             </div>
 
-            <div class="debug padd-5">
-
+            <div class="padd-10 row">
+                <SingleCard v-for="(elem, index) in store.arrayCards" :key="index" :datiSingolaCard="elem" />
             </div>
 
         </div>
 
-    </div>
-
-    <div>
-        <SingleCard />
     </div>
 </template>
 
