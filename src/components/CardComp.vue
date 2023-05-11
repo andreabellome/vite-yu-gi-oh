@@ -3,11 +3,13 @@ import axios from 'axios'
 import { store } from '../store'
 
 import SingleCard from './SingleCard.vue'
+import FilterCards from './FilterCards.vue'
 
 export default {
     name: 'CardComp',
     components: {
-        SingleCard
+        SingleCard,
+        FilterCards
     },
     data() {
         return {
@@ -20,9 +22,13 @@ export default {
 <template>
     <div class="main-div-style">
 
+
+
         <div class="inner-div-style">
 
-            <div class="bg-dark col-white padd-5">
+            <FilterCards />
+
+            <div class="bg-dark col-white padd-5 font-size-20">
                 Found {{ store.arrayCards.length }} cards
             </div>
 
