@@ -5,6 +5,7 @@ import { store } from './store'
 
 import HeaderComp from './components/HeaderComp.vue'
 import CardComp from './components/CardComp.vue'
+import FilterCards from './components/FilterCards.vue'
 
 
 export default {
@@ -16,16 +17,21 @@ export default {
   },
   components: {
     CardComp,
-    HeaderComp
+    HeaderComp,
+    FilterCards
   },
   created() {
     this.callApi();
   },
   methods: {
+
     callApi() {
-      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0').then((res) => {
-        this.store.arrayCards = res.data.data;
-      })
+
+      if (store.valueArchetype !== '') {
+        axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${encodeURIComponent(store.valueArchetype)} `).then((res) => {
+          this.store.arrayCards = res.data.data;
+        })
+      }
     }
   }
 }
@@ -33,6 +39,7 @@ export default {
 
 <template>
   <HeaderComp />
+  <FilterCards @nomeEmit="callApi()" />
   <CardComp />
 </template>
 
