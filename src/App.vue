@@ -31,6 +31,10 @@ export default {
         axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${encodeURIComponent(store.valueArchetype)} `).then((res) => {
           this.store.arrayCards = res.data.data;
         })
+      } else {
+        axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0`).then((res) => {
+          this.store.arrayCards = res.data.data;
+        })
       }
     }
   }

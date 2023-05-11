@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <div class="debug text-center padd-10" style="background-color: orange;">
+    <div class="text-center padd-10" style="background-color: orange;">
         <select name="filter-cards" id="select-cards" v-model="store.valueArchetype" @change="$emit
             ('nomeEmit')">
             <option :value="elem.archetype_name" v-for="(elem, index) in store.arrayArchetype" :key="index">
